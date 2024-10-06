@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Score Predictor</title>
+</head>
+<body>
+    <h1>Predict Exam Score</h1>
+    <form action="/predict" method="POST">
+        <label for="Hours_Studied">Hours Studied:</label>
+        <input type="number" name="Hours_Studied" required><br>
+
+        <label for="Attendance">Attendance (%):</label>
+        <input type="number" name="Attendance" required><br>
+
+        <label for="Parental_Involvement">Parental Involvement:</label>
+        <input type="text" name="Parental_Involvement" required><br>
+
+        <label for="Access_to_Resources">Access to Resources:</label>
+        <input type="text" name="Access_to_Resources" required><br>
+
+        <label for="Extracurricular_Activities">Extracurricular Activities:</label>
+        <input type="text" name="Extracurricular_Activities" required><br>
+
+        <label for="Sleep_Hours">Sleep Hours:</label>
+        <input type="number" name="Sleep_Hours" required><br>
+
+        <label for="Previous_Scores">Previous Scores:</label>
+        <input type="number" name="Previous_Scores" required><br>
+
+        <label for="Motivation_Level">Motivation Level:</label>
+        <input type="text" name="Motivation_Level" required><br>
+
+        <label for="Internet_Access">Internet Access:</label>
+        <input type="text" name="Internet_Access" required><br>
+
+        <label for="Tutoring_Sessions">Tutoring Sessions:</label>
+        <input type="number" name="Tutoring_Sessions" required><br>
+
+        <label for="Family_Income">Family Income:</label>
+        <input type="text" name="Family_Income" required><br>
+
+        <label for="Teacher_Quality">Teacher Quality:</label>
+        <input type="text" name="Teacher_Quality" required><br>
+
+        <label for="School_Type">School Type:</label>
+        <input type="text" name="School_Type" required><br>
+
+        <label for="Peer_Influence">Peer Influence:</label>
+        <input type="text" name="Peer_Influence" required><br>
+
+        <label for="Physical_Activity">Physical Activity:</label>
+        <input type="number" name="Physical_Activity" required><br>
+
+        <label for="Learning_Disabilities">Learning Disabilities:</label>
+        <input type="text" name="Learning_Disabilities" required><br>
+
+        <label for="Parental_Education_Level">Parental Education Level:</label>
+        <input type="text" name="Parental_Education_Level" required><br>
+
+        <label for="Distance_from_Home">Distance from Home:</label>
+        <input type="text" name="Distance_from_Home" required><br>
+
+        <label for="Gender">Gender:</label>
+        <input type="text" name="Gender" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
