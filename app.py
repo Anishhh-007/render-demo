@@ -16,12 +16,10 @@ VALID_MOTIVATION_LEVEL = ['Low', 'Medium', 'High']
 VALID_SCHOOL_TYPE = ['Public', 'Private']
 VALID_PEER_INFLUENCE = ['Negative', 'Neutral', 'Positive']
 
-
 # Home route for the web interface
 @app.route('/')
 def home():
     return render_template('index.html')  # This will display the input form
-
 
 # Prediction route
 @app.route('/predict', methods=['POST'])
@@ -50,11 +48,10 @@ def predict():
             'Gender': request.form['Gender'].strip()
         }
 
-        # Validate 'Parental_Education_Level'
+        # Validate categorical inputs
         if user_input['Parental_Education_Level'] not in VALID_PARENTAL_EDUCATION_LEVEL:
             raise ValueError(f"Invalid Parental Education Level: {user_input['Parental_Education_Level']}")
 
-        # Validate other categorical inputs similarly (e.g., Access_to_Resources)
         if user_input['Access_to_Resources'] not in VALID_ACCESS_TO_RESOURCES:
             raise ValueError(f"Invalid Access to Resources: {user_input['Access_to_Resources']}")
 
@@ -87,14 +84,11 @@ def predict():
         )
 
     except Exception as e:
-        # Print any error that occurs during processing
-        #print(f"Error: {e}")
         return render_template(
             'index.html',
             prediction_text=f"An error occurred: {e}",
             user_input=user_input
         )
-
 
 if __name__ == "__main__":
     app.run(debug=True)

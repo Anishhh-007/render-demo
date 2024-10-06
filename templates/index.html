@@ -9,10 +9,10 @@
     <h1>Predict Exam Score</h1>
     <form action="/predict" method="POST">
         <label for="Hours_Studied">Hours Studied:</label>
-        <input type="number" name="Hours_Studied" required><br>
+        <input type="number" name="Hours_Studied" min="0" required><br>
 
         <label for="Attendance">Attendance (%):</label>
-        <input type="number" name="Attendance" required><br>
+        <input type="number" name="Attendance" min="0" max="100" required><br>
 
         <label for="Parental_Involvement">Parental Involvement:</label>
         <input type="text" name="Parental_Involvement" required><br>
@@ -24,10 +24,10 @@
         <input type="text" name="Extracurricular_Activities" required><br>
 
         <label for="Sleep_Hours">Sleep Hours:</label>
-        <input type="number" name="Sleep_Hours" required><br>
+        <input type="number" name="Sleep_Hours" min="0" required><br>
 
         <label for="Previous_Scores">Previous Scores:</label>
-        <input type="number" name="Previous_Scores" required><br>
+        <input type="number" name="Previous_Scores" min="0" required><br>
 
         <label for="Motivation_Level">Motivation Level:</label>
         <input type="text" name="Motivation_Level" required><br>
@@ -36,7 +36,7 @@
         <input type="text" name="Internet_Access" required><br>
 
         <label for="Tutoring_Sessions">Tutoring Sessions:</label>
-        <input type="number" name="Tutoring_Sessions" required><br>
+        <input type="number" name="Tutoring_Sessions" min="0" required><br>
 
         <label for="Family_Income">Family Income:</label>
         <input type="text" name="Family_Income" required><br>
@@ -51,7 +51,7 @@
         <input type="text" name="Peer_Influence" required><br>
 
         <label for="Physical_Activity">Physical Activity:</label>
-        <input type="number" name="Physical_Activity" required><br>
+        <input type="number" name="Physical_Activity" min="0" required><br>
 
         <label for="Learning_Disabilities">Learning Disabilities:</label>
         <input type="text" name="Learning_Disabilities" required><br>
