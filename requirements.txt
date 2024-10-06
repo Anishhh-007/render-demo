@@ -9,3 +9,4 @@ gunicorn==22.0.0
 Flask==3.0.3
 scikit-learn==1.5.1
 pandas==2.2.2
+MarkupSafe==2.1.5
