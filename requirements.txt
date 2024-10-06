@@ -21,3 +21,5 @@ six==1.16.0
 tqdm==4.66.5
 tzdata==2024.1
 gunicorn==22.0.0
+Flask==3.0.3
+scikit-learn==1.2.2
